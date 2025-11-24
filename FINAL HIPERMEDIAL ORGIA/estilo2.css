@@ -263,6 +263,63 @@ p, span {
         font-size: 1rem;
         line-height: 1.4;
     }
+
+
+
+    @media (max-width: 600px) {
+
+    /* Hacer más chica la tipografía */
+    .inicio-link {
+        font-size: 1.1rem;
+        opacity: 1;
+    }
+
+    /* Ajuste de posiciones para que no se superpongan */
+    .link-top-left { 
+        top: 8%; 
+        left: 5%; 
+    }
+
+    .link-top-right { 
+        top: 8%; 
+        right: 5%; 
+    }
+
+    .link-bottom-left { 
+        bottom: 8%; 
+        left: 5%; 
+    }
+
+    .link-bottom-right { 
+        bottom: 8%; 
+        right: 5%; 
+    }
+
+    /* Achicar el logo para dejar más espacio */
+    .inicio-logo {
+        width: 200px;
+        top: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .nav {
+        padding: 0.6rem 1rem;
+    }
+
+    .nav__logo-img {
+        width: 90px;
+    }
+
+    .nav__links {
+        gap: 0.6rem;
+    }
+
+    .nav__links a {
+        font-size: 0.75rem;
+    }
+}
 }
 
 /* DESKTOP */
