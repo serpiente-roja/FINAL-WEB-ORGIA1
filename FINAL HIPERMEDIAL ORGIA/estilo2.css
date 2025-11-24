@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Almarai', sans-serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.5;
+}
+
+
+/* -------------------------------------------------------
+   TIPOGRAFÍAS
+--------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6,
+.nav__logo,
+.nav__links a,
+.titulo {
+    font-family: 'ABeeZee', sans-serif;
+}
+
+p, span {
+    font-family: 'Almarai', sans-serif;
+    
+}
+
+
+/* -------------------------------------------------------
+   NAV
+--------------------------------------------------------*/
+.nav {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav__logo-img {
+    width: 120px;   /* ajustá el tamaño */
+    height: auto;
+    cursor: pointer;
+}
+.nav__logo {
+    font-weight: 700;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav__links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #000;
+    opacity: 0.75;
+    transition:
+        filter 0.3s ease,
+        text-shadow 0.4s ease,
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+/* HOVER CON GLOW + SCALE + BLUR */
+.nav__links a:hover {
+    filter: blur(0.8px);
+    text-shadow: 
+        0 0 10px rgba(0, 200, 255, 0.8),
+        0 0 20px rgba(0, 200, 255, 0.6),
+        0 0 35px rgba(0, 200, 255, 0.4);
+    transform: scale(1.12);
+    opacity: 1;
+}
+
+
+/* -------------------------------------------------------
+   CONTENEDOR GENERAL
+--------------------------------------------------------*/
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.bloque {
+    margin: 3rem 0;
+}
+
+.img-placeholder {
+    width: 1300px;     /* CRECE hasta 1300 px aunque la imagen sea más chica */
+    max-width: 100%;   /* ⭐ evita que se salga de la pantalla */
+    height: auto;      /* ⭐ mantiene proporción perfecta */
+    object-fit: contain; /* ⭐ mantiene proporción sin deformar */
+    display: block;
+    margin: 2.5rem auto;
+}
+
+.texto {
+    margin: 3rem 0;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+
+/* -------------------------------------------------------
+   INSTALACIONES (PÁGINA 3)
+--------------------------------------------------------*/
+.instalaciones-header {
+    width: 100%;
+    max-width: 1700px;
+    margin: 2rem auto 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Título alineado a l centro */
+.inst-titulo {
+    font-size: 5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Subtítulo centrado thin */
+.inst-subtitulo {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Subtítulo centrado en negrita */
+.inst-subtitulo-bold {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Texto destacado */
+.inst-texto-destacado {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+
+/* -------------------------------------------------------
+   INICIO (PÁGINA PRINCIPAL)
+--------------------------------------------------------*/
+.inicio-body {
+    background: #bde8ff;
+}
+
+/* Contenedor general */
+.inicio-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Links principales */
+.inicio-link {
+    position: absolute;
+    font-family: 'Almarai', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #111;
+    opacity: 0.75;
+    transition:
+        filter 0.3s ease,
+        text-shadow 0.3s ease,
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+/* Posiciones */
+.link-top-left { top: 15%; left: 15%; }
+.link-top-right { top: 15%; right: 15%; }
+.link-bottom-left { bottom: 15%; left: 15%; }
+.link-bottom-right { bottom: 15%; right: 15%; }
+
+/* Hover: glow + blur + scale */
+.inicio-link:hover {
+    filter: blur(0.8px);
+    text-shadow: 0 0 12px rgba(0,0,0,0.25);
+    transform: scale(1.12);
+    opacity: 1;
+}
+
+/* Logo central */
+.inicio-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+    transition: transform 0.4s ease;
+}
+
+.inicio-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+
+/* -------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------*/
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .img-placeholder {
+        width: 100%;
+        max-width: 100%;
+        margin: 2rem 0;
+    }
+
+
+    .texto p {
+        font-size: 1.2rem;
+    }
+
+    .inst-titulo {
+        font-size: 3rem;
+    }
+
+    .inst-subtitulo,
+    .inst-subtitulo-bold {
+        font-size: 1.6rem;
+    }
+
+    .inst-texto-destacado {
+        font-size: 1.8rem;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .img-placeholder {
+        width: 100%;
+        max-width: 100%;
+        margin: 1.5rem 0;
+    }
+
+    .texto p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+    .nav__links a {
+        font-size: 1rem;
+    }
+
+    .img-placeholder {
+        width: 1300px;
+        max-width: 100%;
+        height: auto; /* Mantiene proporción */
+        object-fit: contain; /* Evita deformación */
+    }
+
+    .texto {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .inst-titulo {
+        font-size: 3.2rem;
+    }
+
+    .inst-subtitulo,
+    .inst-subtitulo-bold {
+        font-size: 1.7rem;
+    }
+
+    .inst-texto-destacado {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+    p, 
+    span, 
+    .texto p {
+        font-size: 1.35rem !important;   /* tamaño más grande */
+        line-height: 1.75 !important;    /* lectura más cómoda */
+    }
+}
+}
