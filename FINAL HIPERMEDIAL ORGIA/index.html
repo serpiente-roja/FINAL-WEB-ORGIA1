@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio</title>
+  <!-- El CSS aplicaba la tipografía en todas las páginas, pero no estaba incluida en index.html -->
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital,wght@0,400;1,400&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilo2.css">
 </head>
 
 <body class="inicio-body">
 
   <main class="inicio-container">
+    <!-- Sería bueno incluir un título o encabezado principal para mejorar la estructura del documento. Puede estar oculto visualmente pero accesible para lectores de pantalla. -->
 
     <!-- ENLACES A CADA SECCIÓN -->
-    <a href="quienes-somos.html" class="inicio-link link-top-left">QUIENES SOMOS</a>
-    <a href="instalaciones.html" class="inicio-link link-top-right">INSTALACIONES</a>
-    <a href="performances.html" class="inicio-link link-bottom-left">PERFORMANCES</a>
-    <a href="manifiestos.html" class="inicio-link link-bottom-right">MANIFIESTOS</a>
+    <!-- Evitar el uso de mayústulas, eso se puede lograr con CSS -->
+    <a href="quienes-somos.html" class="inicio-link link-top-left">Quienes somos</a>
+    <a href="instalaciones.html" class="inicio-link link-top-right">Instalaciones</a>
+    <a href="performances.html" class="inicio-link link-bottom-left">Performances</a>
+    <a href="manifiestos.html" class="inicio-link link-bottom-right">Manifiestos</a>
 
     <!-- IMAGEN CENTRAL -->
+     <!-- El alt puede ser más descriptivo para mejorar la accesibilidad -->
     <img src="assets/img/menu.png" alt="Símbolo central" class="inicio-logo">
 
   </main>
